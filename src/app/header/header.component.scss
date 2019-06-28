@@ -3,7 +3,8 @@
     justify-content: space-around;
     a{
         all:unset;
-        color:red;
+        font-size: 1.3em;
+        color:rgb(0, 92, 179);
         &:hover{
             text-decoration: underline;
             cursor: pointer;
