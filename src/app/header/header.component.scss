@@ -1,0 +1,13 @@
+.header{
+    display:flex;
+    justify-content: space-around;
+    a{
+        all:unset;
+        color:red;
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+}
