@@ -1,3 +1,6 @@
+<button (click)="decrementPage()" ><-</button>
+{{page}} <button (click)="incrementPage()">-></button>
+<button (click)="goToLastPage()">Última página</button>
 <div class="popularMovies">
 <div class="movie" *ngFor="let movie of movies">
     <div> <h2>{{movie.title}}</h2>

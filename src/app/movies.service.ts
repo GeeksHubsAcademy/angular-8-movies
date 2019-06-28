@@ -7,8 +7,8 @@ import {Observable} from 'rxjs' //importo el Observable para tipar el método ge
 export class MoviesService { //generamos el servicio con ng g service [nombre del servicio]
   constructor(private http: HttpClient) { } // aquí inyectamos el httpClient como dependencia del servicio Movies
   
-  getPopularMovies():Observable<any>{ //aquí creamos un método para obtener las películas utilizando el httpClient (el equivalente de axios en angular)
-     return this.http.get('https://api.themoviedb.org/3/movie/popular?api_key=210d6a5dd3f16419ce349c9f1b200d6d');
+  getPopularMovies(page):Observable<any>{ //aquí creamos un método para obtener las películas utilizando el httpClient (el equivalente de axios en angular)
+     return this.http.get(`https://api.themoviedb.org/3/movie/popular?api_key=210d6a5dd3f16419ce349c9f1b200d6d&page=${page}`);
   }
   getUpcomingMovies():Observable<any>{
     return this.http.get('https://api.themoviedb.org/3/movie/upcoming?api_key=210d6a5dd3f16419ce349c9f1b200d6d');
