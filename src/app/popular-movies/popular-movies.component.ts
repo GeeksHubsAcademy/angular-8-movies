@@ -10,6 +10,6 @@ export class PopularMoviesComponent implements OnInit {
   constructor(private moviesService: MoviesService) { } //inyecto el servicio como dependencia del componente Popular Movies
 
   ngOnInit(): void {//es el equivalente a ComponentDidMount
-    this.moviesService.getPopularMovies().subscribe(value => this.movies = value.results, error => console.log(error));
+    this.moviesService.getPopularMovies().subscribe(res => this.movies = res.results, error => console.log(error));
   }
 }

@@ -10,4 +10,7 @@ export class MoviesService { //generamos el servicio con ng g service [nombre de
   getPopularMovies():Observable<any>{ //aquí creamos un método para obtener las películas utilizando el httpClient (el equivalente de axios en angular)
      return this.http.get('https://api.themoviedb.org/3/movie/popular?api_key=210d6a5dd3f16419ce349c9f1b200d6d');
   }
+  getUpcomingMovies():Observable<any>{
+    return this.http.get('https://api.themoviedb.org/3/movie/upcoming?api_key=210d6a5dd3f16419ce349c9f1b200d6d');
+  }
 }
